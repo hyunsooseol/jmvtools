@@ -1,0 +1,92 @@
+---
+name:  correlation
+title: Correlation
+version: '1.0.0'
+jas: '1.2'
+menuGroup: Correlations
+
+options:
+    - name: data
+      type: Data
+      description:
+          R: the data as a data frame
+
+    - name: vars
+      title: Variables
+      type: Variables
+      suggested:
+         - nominal
+         - continuous
+      permitted:
+        - numeric
+      rejectInf: false
+      takeFromDataIfMissing: true
+      description:
+          R: a vector of strings naming the variables of interest in `data`
+
+    - name: personCoef
+      title: Pearson
+      type: Bool
+      default: true
+      description:
+          R: >
+            `TRUE` (default) or `FALSE`, provide Pearson
+
+    - name: spearmanCoef
+      title: Spearman
+      type: Bool
+      default: false
+      description:
+          R: >
+            `TRUE` (default) or `FALSE`, provide Spearman
+
+    - name: partialCoef
+      title: Partial
+      type: Bool
+      default: false
+      description:
+          R: >
+            `TRUE` (default) or `FALSE`, provide Partial
+
+    - name: TetrachoricCoef
+      title: Tetrachoric
+      type: Bool
+      default: false
+      description:
+          R: >
+            `TRUE` (default) or `FALSE`, provide Tetrachoric
+
+    - name: PolychoricCoef
+      title: Polychoric
+      type: Bool
+      default: false
+      description:
+          R: >
+            `TRUE` (default) or `FALSE`, provide Polychoric
+
+    - name: BiserialCoef
+      title: Biserial
+      type: Bool
+      default: false
+      description:
+          R: >
+            `TRUE` (default) or `FALSE`, provide Biserial
+
+    - name: conf.level
+      title: Confidence interval width
+      type: Number
+      default: 0.95
+      description:
+          R: >
+            a number between 0 and 1 (default: 0.95), specifying the confidence
+            interval width
+
+    - name: GaussianPlot
+      title: Gaussian Graphical Model
+      type: Bool
+      default: false
+      description:
+          R: >
+            `TRUE` (default) or `FALSE`, provide correlation plot
+
+...
