@@ -1,0 +1,52 @@
+---
+name:  multisurvival
+title: Multivariate Survival Analysis
+jrs:   '1.1'
+
+items:
+
+    - name:  todo
+      title: To Do
+      type:  Html
+      clearWith:
+          - explanatory
+          - outcome
+          - overalltime
+
+    - name:  text
+      title: Multivariate Survival
+      type:  Html
+      clearWith:
+          - explanatory
+          - outcome
+          - overalltime
+
+    - name: plot
+      title: Hazards Regression Plot
+      type: Image
+      width:  600
+      height: 450
+      renderFun: .plot
+      requiresData: true
+      clearWith:
+          - explanatory
+          - outcome
+          - overalltime
+
+    - name: plot2
+      title: Hazards Regression Plot
+      type: Image
+      width:  800
+      height: 600
+      renderFun: .plot2
+      requiresData: true
+      clearWith:
+          - explanatory
+          - outcome
+          - overalltime
+
+refs:
+    - finalfit
+    - ggstatsplot
+
+...

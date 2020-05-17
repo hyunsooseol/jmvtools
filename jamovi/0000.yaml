@@ -1,0 +1,194 @@
+---
+title: Common Analysis for Clinicopathological Research
+name: ClinicoPath
+version: 0.0.1.0013
+jms: '1.0'
+authors:
+  - Serdar Balci
+maintainer: Serdar Balci <drserdarbalci@gmail.com>
+date: '2020-05-13'
+type: R
+description: >-
+  ClinicoPath help researchers to generate natural language summaries of their
+  dataset, generate cross tables with statistical tests, and survival analysis
+  with survival tables, survival plots, and natural language summaries.
+analyses:
+  - title: Table One
+    name: tableone
+    ns: ClinicoPath
+    menuGroup: ClinicoPath
+    menuSubgroup: Descriptives
+    menuTitle: Table One
+    description: Function for making Table One.
+  - title: Summary of Continuous Variables
+    name: summarydata
+    ns: ClinicoPath
+    menuGroup: ClinicoPath
+    menuSubgroup: Descriptives
+    menuTitle: Summary of Continuous Variables
+    description: Function for Generating Summaries for Continuous Variables.
+  - title: Summary of Categorical Variables
+    name: reportcat
+    ns: ClinicoPath
+    menuGroup: ClinicoPath
+    menuSubgroup: Descriptives
+    menuTitle: Summary of Categorical Variables
+    description: Function for Generating Summaries for Categorical Variables.
+  - title: Cross Tables
+    name: crosstable
+    ns: ClinicoPath
+    menuGroup: ClinicoPath
+    menuSubgroup: Comparisons
+    menuTitle: Cross Tables
+    description: Function for making Cross Tables.
+  - title: Graphs and Plots
+    name: statsplot2
+    ns: ClinicoPath
+    menuGroup: ClinicoPath
+    menuSubgroup: Comparisons
+    menuTitle: Graphs and Plots
+    description: Function for Generating Plots and Graphs Based on Variable Types.
+  - title: Survival Analysis
+    name: survival
+    ns: ClinicoPath
+    menuGroup: ClinicoPath
+    menuSubgroup: Survival
+    menuTitle: Survival Analysis
+    description: Function for Generating Summaries for Survival Analysis.
+  - title: Multivariate Survival Analysis
+    name: multisurvival
+    ns: ClinicoPath
+    menuGroup: ClinicoPath
+    menuSubgroup: Survival
+    menuTitle: Multivariate Survival Analysis
+    description: Function for Multivariate Survival Analysis using Cox-regression.
+  - title: Odds Ratio Table and Plot
+    name: oddsratio
+    ns: ClinicoPath
+    menuGroup: ClinicoPath
+    menuSubgroup: Survival
+    menuTitle: Odds Ratio Table and Plot
+    description: Function for Odds Ratio Table and Plot.
+  - title: Interrater Reliability
+    name: agreement
+    ns: ClinicoPath
+    menuGroup: ClinicoPath
+    menuSubgroup: Agreement
+    menuTitle: Interrater Reliability
+    description: Function for Interrater Reliability.
+  - title: Competing Survival
+    name: competingsurvival
+    ns: ClinicoPath
+    menuGroup: ClinicoPath2
+    menuSubgroup: Survival
+    menuTitle: Competing Survival
+    description: Function for Competing Survival.
+  - title: Correlation
+    name: correlation
+    ns: ClinicoPath
+    menuGroup: ClinicoPath2
+    menuSubgroup: Correlation
+    menuTitle: Correlation
+    description: Function for Correlation.
+  - title: Medical Decision
+    name: decision
+    ns: ClinicoPath
+    menuGroup: ClinicoPath
+    menuSubgroup: Decision
+    menuTitle: Medical Decision
+    description: >
+      Function for Medical Decision Analysis. Sensitivity, specificity, positive
+      predictive value, negative predictive value.
+  - title: Decision Calculator
+    name: decisioncalculator
+    ns: ClinicoPath
+    menuGroup: ClinicoPath
+    menuSubgroup: Decision
+    menuTitle: Decision Calculator
+    description: Function for Medical Decision Calculator.
+  - title: Decision Tree
+    name: tree
+    ns: ClinicoPath
+    menuGroup: ClinicoPath2
+    menuSubgroup: Decision
+    menuTitle: Decision Tree
+    description: Function for making Decision Trees.
+  - title: Pairwise Chi-Square Test
+    name: pairchi2
+    ns: ClinicoPath
+    menuGroup: ClinicoPath2
+    menuTitle: Pairwise Chi-Square Test
+    menuSubgroup: Comparisons
+    description: >
+      The χ² test of association (not to be confused with the χ² goodness of
+      fit) is used to test whether two categorical variables are independent or
+      associated. If the p-value is low, it suggests the variables are not
+      independent, and that there is a relationship between the two variables.
+    menuSubtitle: Pairwise Chi-Square Test
+  - title: Variable Tree
+    name: vartree
+    ns: ClinicoPath
+    menuGroup: ClinicoPath2
+    menuSubgroup: Descriptives
+    menuTitle: Variable Tree
+    description: Function for Generating Tree Summaries of Variables.
+  - title: ROC
+    name: roc
+    ns: ClinicoPath
+    menuGroup: ClinicoPath2
+    menuSubgroup: Decision
+    menuTitle: ROC
+    description: Function for ROC Analysis.
+  - title: ICC coefficients
+    name: icccoeff
+    ns: ClinicoPath
+    menuGroup: ClinicoPath2
+    menuSubgroup: Agreement
+    menuTitle: ICC coefficients
+    description: Function for Interclass Correlation Coefficient Calculation.
+  - title: Tables via gtsummary
+    name: gtsummary
+    ns: ClinicoPath
+    menuGroup: ClinicoPath2
+    menuTitle: Tables via gtsummary
+    menuSubgroup: Comparisons
+datasets:
+  - name: histopathology including analysis
+    path: histopathologyanalysis.omv
+    description: >-
+      Fake histopathology research data for ClinicoPath module, includes
+      analysis
+    tags:
+      - Table One
+      - Data Summary
+      - Survival
+      - Natural Language
+  - name: histopathology data only
+    path: histopathology.omv
+    description: Fake histopathology research data for ClinicoPath module
+    tags:
+      - Table One
+      - Data Summary
+      - Survival
+  - name: melanoma
+    path: melanoma.csv
+    description: 'melanoma dataset obtained from {boot}.'
+    tags:
+      - Data Summary
+      - Survival
+      - Competing risks regression
+  - name: colon
+    path: colon.csv
+    description: 'colon cancer dataset, obtained from {survival}.'
+    tags:
+      - Data Summary
+      - Survival
+  - name: BreastCancer
+    path: BreastCancer.csv
+    description: 'Wisconsin Breast Cancer Database dataset, obtained from {mlbench}.'
+    tags:
+      - Classification
+usesNative: true
+minApp: 1.3.0
+
+...

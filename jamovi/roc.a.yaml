@@ -1,0 +1,49 @@
+---
+name:  roc
+title: ROC
+menuGroup: ClinicoPath2
+menuSubgroup: Decision
+version: '1.0.0'
+jas: '1.2'
+
+description:
+    main: Function for ROC Analysis.
+    R:
+        dontrun: true
+        usage: |
+            # example will be added
+
+
+options:
+    - name: data
+      type: Data
+      description:
+          R: >
+            The data as a data frame.
+
+
+    - name: dep
+      title: Dependent Variable
+      type: Variable
+
+    - name: group
+      title: Grouping Variable
+      type: Variable
+
+    - name: alt
+      title: Alternative hypothesis
+      type: List
+      options:
+        - title: Not equal
+          name:  notequal
+        - title: One greater
+          name:  onegreater
+        - title: Two greater
+          name:  twogreater
+      default: notequal
+
+    - name: varEq
+      title: Assume equal variances
+      type: Bool
+      default: true
+...

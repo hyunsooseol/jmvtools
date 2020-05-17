@@ -1,0 +1,43 @@
+title: Competing Survival
+name: competingsurvival
+jus: '3.0'
+stage: 0
+compilerMode: tame
+children:
+  - type: VariableSupplier
+    persistentItems: false
+    stretchFactor: 1
+    children:
+      - type: TargetLayoutBox
+        label: Explanatory Variable
+        children:
+          - type: VariablesListBox
+            name: explanatory
+            maxItemCount: 1
+            isTarget: true
+      - type: TargetLayoutBox
+        label: Overall Time (in months)
+        children:
+          - type: VariablesListBox
+            name: overalltime
+            maxItemCount: 1
+            isTarget: true
+      - type: TargetLayoutBox
+        label: Outcome
+        children:
+          - type: VariablesListBox
+            name: outcome
+            maxItemCount: 1
+            isTarget: true
+          - type: LevelSelector
+            name: dod
+            enable: (outcome)
+          - type: LevelSelector
+            name: dooc
+            enable: (outcome)
+          - type: LevelSelector
+            name: awd
+            enable: (outcome)
+          - type: LevelSelector
+            name: awod
+            enable: (outcome)

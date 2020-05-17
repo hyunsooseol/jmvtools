@@ -1,0 +1,38 @@
+---
+name:  decision
+title: Medical Decision
+jrs:   '1.1'
+
+items:
+
+    # - name:  todo
+    #   title: To Do
+    #   type:  Html
+
+    - name:  text1
+      title: Original Data
+      type:  Preformatted
+
+
+    - name:  text2
+      title: Decision Tests
+      type:  Preformatted
+
+
+    # - name:  text3
+    #   title: Matrix Details
+    #   type:  Preformatted
+
+
+    # - name:  text4
+    #   title: Medical Decision Deneme
+    #   type:  Preformatted
+
+
+    # - name:  text5
+    #   title: Medical Decision epiR
+    #   type:  Preformatted
+
+refs: caret
+
+...

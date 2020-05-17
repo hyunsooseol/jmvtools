@@ -1,0 +1,36 @@
+---
+name:  tree
+title: Decision Tree
+menuGroup: ClinicoPath2
+menuSubgroup: Decision
+version: '1.0.0'
+jas: '1.2'
+
+description:
+    main: Function for making Decision Trees.
+    R:
+        dontrun: true
+        usage: |
+            # example will be added
+
+
+options:
+    - name: data
+      type: Data
+      description:
+          R: >
+            The data as a data frame.
+
+
+    - name: vars
+      title: Explanatory Variables
+      type: Variables
+      description: >
+                  explanatory variables
+
+    - name: target
+      title: Target Variable
+      type: Variable
+      description: >
+                  target variable
+...

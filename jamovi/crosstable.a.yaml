@@ -1,0 +1,50 @@
+---
+name:  crosstable
+title: Cross Tables
+menuGroup: ClinicoPath
+menuSubgroup: Comparisons
+version: '1.0.0'
+jas: '1.2'
+
+description:
+    main: Function for making Cross Tables.
+    R:
+        dontrun: true
+        usage: |
+            # example will be added
+
+
+options:
+    - name: data
+      type: Data
+      description:
+          R: >
+            The data as a data frame.
+
+
+    - name: vars
+      title: Dependent Variable
+      type: Variables
+
+    - name: group
+      title: Grouping Variable
+      type: Variable
+      suggested: [ ordinal, nominal ]
+      permitted: [ factor ]
+      description: >
+                  variable in the column
+
+
+    - name: sty
+      title: Table Style
+      type: List
+      options:
+        - title: NEJM
+          name: nejm
+        - title: Lancet
+          name: lancet
+        - title: hmisc
+          name: hmisc
+      default: nejm
+
+...
